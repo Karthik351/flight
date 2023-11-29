@@ -1,0 +1,41 @@
+<!-- flights/reservations_table.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations Table</title>
+</head>
+<body>
+    <h1>Reservations Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Reservation ID</th>
+                <th>Passenger ID</th>
+                <th>Flight ID</th>
+                <th>Seat Number</th>
+                <th>Reservation Code</th>
+                <th>Date of Flight</th>
+                <!-- Add other fields as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for reservation in reservations %}
+                <tr>
+                    <td>{{ reservation.id }}</td>
+                    <td>{{ reservation.passenger.id }}</td>
+                    <td>{{ reservation.flight.id }}</td>
+                    <td>{{ reservation.seat_number }}</td>
+                    <td>{{ reservation.reservation_code }}</td>
+                    <td>{{ reservation.date_of_flight }}</td>
+                    <!-- Add other fields as needed -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

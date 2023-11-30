@@ -1,0 +1,19 @@
+<!-- flights/add_passenger.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Passenger</title>
+</head>
+<body>
+    <h1>Add Passenger to Flight</h1>
+    <form method="post" action="{% url 'add_passenger' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Passenger</button>
+    </form>
+</body>
+</html>

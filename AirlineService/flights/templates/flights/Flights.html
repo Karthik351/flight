@@ -1,0 +1,122 @@
+<!-- flights/Flights.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <style>
+        header {
+           text-align: center;
+           background: url('static/Images/header1.png') center/cover no-repeat;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: black;
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 6px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Flights</h1>
+</header>
+    <table>
+        <tbody>
+                <tr>
+                <td>Flight Number</td>
+                <td><input type="text" name="flight_number"></td>
+                </tr>
+                <tr>
+                <td>Departure Airport</td>
+                <td><input type="text" name="departure_airport"></td>
+                    </tr>
+                <tr>
+                <td>Destination Airport</td>
+                <td><input type="text" name="destination_airport"></td>
+                    </tr>
+                <tr>
+                <td>Departure Time</td>
+                <td><input type="text" name="departure_time"></td>
+                    </tr>
+                <tr>
+                <td>Arrival Time</td>
+                <td><input type="text" name="arrival_time"></td>
+                    </tr>
+                <tr>
+                <td>Total Seats</td>
+                <td><input type="text" name="total_seats"></td>
+                    </tr>
+                <tr>
+                <td>Seats Booked</td>
+                <td><input type="text" name="seats_booked"></td>
+        </tr>
+        </tbody>
+        <tbody>
+            {% for flight in flights %}
+                    {{ flight.flight_number }}
+                   {{ flight.departure_airport }}
+                   {{ flight.destination_airport }}
+                    {{ flight.departure_time }}
+                    {{ flight.arrival_time }}
+                    {{ flight.total_seats }}
+                    {{ flight.seats_booked }}
+            {% endfor %}
+        </tbody>
+    </table>
+        <div class="button-container">
+            <button type="submit"></button> </div>
+</body>
+</html>

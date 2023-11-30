@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravAir</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+        h1 {
+            color: #0B0C0E;
+            text-align: center;
+        }
+        header {
+           text-align: center;
+           background: url('static/Images/header1.png') center/cover no-repeat;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-size: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+         h1 {
+            color: #0B0C0E;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.0 em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 1.2em;
+        }
+        button {
+            display: inline-block;
+            padding: 15px 60px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .features {
+            margin-top: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .feature img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TravAir </h1>
+        <p><br><br>Your one-stop solution for hassle-free air travel</p>
+    </header>
+          <div class="button-container">
+        <button class="button" onclick="window.location.href='/Flights/'">Flights</button>
+        <button class="button" onclick="window.location.href='/Reservations/'">Reservations</button>
+        <button class="button" onclick="window.location.href='/AvailableFlights/'">Available Flights</button>
+        <button class="button" onclick="window.location.href='/Passenger/'">Passengers Info</button>
+        <button class="button" onclick="window.location.href='/add_passenger/'">Add Passenger</button>
+        <button class="button" onclick="window.location.href='/Admin/'">Admin</button>
+    </div>
+    <div class="container">
+        <h1>Welcome to TravAir, where your journey begins!</h1>
+
+        <div id="features" class="features">
+            <div class="feature">
+                <img src="static/Images/flight_icon.png" alt="Flight Icon">
+                <h2>Wide Range of Flights</h2>
+                <p>Discover a variety of flights to your favorite destinations.</p>
+            </div>
+            <div class="feature">
+                <img src="static/Images/reservations_icon.png" alt="Reservation Icon">
+                <h2>Easy Reservations</h2>
+                <p>Effortlessly book your seats and manage your reservations online.</p>
+            </div>
+            <div class="feature">
+                <img src="static/Images/passenger_icon.png" alt="Passenger Icon">
+                <h2>Passenger Services</h2>
+                <p>Enjoy dedicated services for passengers, ensuring a comfortable journey.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 TravAir. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
